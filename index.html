@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Can Healthcare Supplier – Your Trusted Healthcare Partner</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* Header and Navigation */
+        header {
+            background-color: #1a1a1a;
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-top {
+            background-color: #0d0d0d;
+            padding: 10px 0;
+            font-size: 14px;
+            color: #fff;
+        }
+
+        .header-top-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .contact-info {
+            display: flex;
+            gap: 30px;
+        }
+
+        .contact-info a {
+            color: #FFC300;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .contact-info a:hover {
+            color: #fff;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 24px;
+            font-weight: bold;
+            color: #fff;
+        }
+
+        .logo img {
+            height: 80px;
+            max-width: 350px;
+            object-fit: contain;
+            background-color: #fff;
+            padding: 8px 15px;
+            border-radius: 5px;
+        }
+
+        .logo-box {
+            background-color: #004D99;
+            padding: 10px 15px;
+            border-radius: 5px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #FFC300;
+        }
+
+        .cta-button {
+            background-color: #004D99;
+            color: #fff;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .cta-button:hover {
+            background-color: #003366;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%23004D99" width="1200" height="600"/><circle cx="200" cy="150" r="100" fill="%23FFC300" opacity="0.1"/><circle cx="1000" cy="450" r="150" fill="%23FFC300" opacity="0.1"/></svg>');
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            padding: 120px 20px;
+            text-align: left;
+            min-height: 500px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .hero-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            max-width: 600px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero .cta-button {
+            background-color: #FFC300;
+            color: #004D99;
+            width: fit-content;
+            font-weight: bold;
+        }
+
+        .hero .cta-button:hover {
+            background-color: #FFD700;
+        }
+
+        /* Licensed Distributor Section */
+        .licensed-section {
+            background-color: #004D99;
+            color: #fff;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .licensed-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .licensed-text {
+            flex: 1;
+            text-align: left;
+        }
+
+        .licensed-text h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .licensed-text p {
+            font-size: 16px;
+            line-height: 1.8;
+        }
+
+        .licensed-button {
+            background-color: #FFC300;
+            color: #004D99;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            margin-top: 20px;
+            transition: background-color 0.3s;
+        }
+
+        .licensed-button:hover {
+            background-color: #FFD700;
+        }
+
+        /* About Section */
+        .about-section {
+            padding: 80px 20px;
+            background-color: #f9f9f9;
+        }
+
+        .about-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .about-text h2 {
+            font-size: 32px;
+            color: #004D99;
+            margin-bottom: 20px;
+        }
+
+        .about-text p {
+            font-size: 16px;
+            line-height: 1.8;
+            margin-bottom: 15px;
+            color: #555;
+        }
+
+        .about-image {
+            background: linear-gradient(135deg, #004D99, #0066CC);
+            padding: 40px;
+            border-radius: 10px;
+            text-align: center;
+            color: #fff;
+            min-height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+        }
+
+        .experience-badge {
+            background-color: #004D99;
+            color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .experience-badge h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        /* Why Choose Us Section */
+        .why-section {
+            padding: 80px 20px;
+            background-color: #fff;
+        }
+
+        .why-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-header .label {
+            color: #004D99;
+            font-weight: bold;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .section-header h2 {
+            font-size: 40px;
+            color: #1a1a1a;
+            margin-top: 10px;
+        }
+
+        .why-cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+        }
+
+        .why-card {
+            background-color: #f9f9f9;
+            padding: 40px;
+            border-radius: 10px;
+            text-align: center;
+            border-top: 4px solid #FFC300;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .why-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0, 77, 153, 0.1);
+        }
+
+        .why-card-icon {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .why-card h3 {
+            font-size: 22px;
+            color: #004D99;
+            margin-bottom: 15px;
+        }
+
+        .why-card p {
+            color: #666;
+            line-height: 1.8;
+        }
+
+        /* Services Section */
+        .services-section {
+            background-color: #004D99;
+            color: #fff;
+            padding: 80px 20px;
+        }
+
+        .services-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .services-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .services-header .label {
+            color: #FFC300;
+            font-weight: bold;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .services-header h2 {
+            font-size: 40px;
+            margin-top: 10px;
+        }
+
+        .services-header p {
+            font-size: 16px;
+            margin-top: 20px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .services-cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        .service-card {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 40px;
+            border-radius: 10px;
+            border: 2px solid #FFC300;
+            transition: all 0.3s;
+        }
+
+        .service-card:hover {
+            background-color: rgba(255, 195, 0, 0.2);
+            transform: translateY(-5px);
+        }
+
+        .service-card h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: #FFC300;
+        }
+
+        .service-card p {
+            font-size: 15px;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .service-link {
+            color: #FFC300;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        .service-link:hover {
+            color: #fff;
+        }
+
+        /* Way of Working Section */
+        .working-section {
+            padding: 80px 20px;
+            background-color: #f9f9f9;
+        }
+
+        .working-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .working-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .working-header .label {
+            color: #004D99;
+            font-weight: bold;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .working-header h2 {
+            font-size: 40px;
+            color: #1a1a1a;
+            margin-top: 10px;
+        }
+
+        .working-steps {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+        }
+
+        .step {
+            text-align: center;
+        }
+
+        .step-number {
+            background-color: #004D99;
+            color: #FFC300;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            font-weight: bold;
+            margin: 0 auto 20px;
+        }
+
+        .step h3 {
+            font-size: 22px;
+            color: #004D99;
+            margin-bottom: 15px;
+        }
+
+        .step p {
+            color: #666;
+            line-height: 1.8;
+        }
+
+        /* Products Section */
+        .products-section {
+            padding: 80px 20px;
+            background-color: #fff;
+        }
+
+        .products-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .products-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .products-header h2 {
+            font-size: 40px;
+            color: #1a1a1a;
+            margin-bottom: 20px;
+        }
+
+        .products-header p {
+            color: #666;
+            font-size: 16px;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+        }
+
+        .product-card {
+            background: linear-gradient(135deg, #004D99, #0066CC);
+            color: #fff;
+            padding: 40px 20px;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .product-card h3 {
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+
+        .product-card p {
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            padding: 80px 20px;
+            background-color: #004D99;
+            color: #fff;
+        }
+
+        .contact-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .contact-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .contact-header h2 {
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+
+        .contact-header p {
+            font-size: 16px;
+        }
+
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: start;
+        }
+
+        .contact-info-box {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 40px;
+            border-radius: 10px;
+            border-left: 4px solid #FFC300;
+        }
+
+        .contact-info-box h3 {
+            font-size: 20px;
+            margin-bottom: 20px;
+            color: #FFC300;
+        }
+
+        .contact-info-box p {
+            font-size: 15px;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        .contact-form {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 40px;
+            border-radius: 10px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #FFC300;
+            border-radius: 5px;
+            font-family: inherit;
+            font-size: 14px;
+            background-color: rgba(255, 255, 255, 0.9);
+            color: #333;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #fff;
+            background-color: #fff;
+        }
+
+        .form-submit {
+            background-color: #FFC300;
+            color: #004D99;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 16px;
+            transition: background-color 0.3s;
+            width: 100%;
+        }
+
+        .form-submit:hover {
+            background-color: #FFD700;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #0d0d0d;
+            color: #fff;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-content p {
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+
+        .footer-content a {
+            color: #FFC300;
+            text-decoration: none;
+        }
+
+        .footer-content a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .why-cards,
+            .services-cards,
+            .working-steps {
+                grid-template-columns: 1fr;
+            }
+
+            .products-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .about-container,
+            .contact-content,
+            .licensed-content {
+                grid-template-columns: 1fr;
+            }
+
+            .header-top-content {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .nav-container {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .logo img {
+                height: 60px;
+                max-width: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-top">
+            <div class="header-top-content">
+                <div class="contact-info">
+                    <a href="mailto:info@canhealthcaresupplier.com">📧 Email: info@canhealthcaresupplier.com</a>
+                    <a href="tel:+18885555267">☎️ Toll Free: (888) 555-5267</a>
+                </div>
+            </div>
+        </div>
+        <div class="nav-container">
+            <div class="logo">
+                <img src="logo.jpg" alt="Can Healthcare Supplier">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">HOME</a></li>
+                    <li><a href="#about">ABOUT US</a></li>
+                    <li><a href="#services">SERVICES</a></li>
+                    <li><a href="#products">PRODUCTS</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
+                </ul>
+            </nav>
+            <button class="cta-button">Get In Touch</button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Supplying Health, Empowering Care</h1>
+            <p>Partner with a trusted name in healthcare supply for reliable products and exceptional service.</p>
+            <button class="cta-button">OUR SERVICES</button>
+        </div>
+    </section>
+
+    <!-- Licensed Distributor Section -->
+    <section class="licensed-section">
+        <div class="licensed-content">
+            <div class="licensed-text">
+                <h2>Quality and Compliance Assured</h2>
+                <p>As a sister company to PB Pharma, we uphold the highest standards of quality and regulatory compliance in all our operations. Upon request, we can provide you with documentation of our licensing and certifications from the relevant health authorities.</p>
+                <button class="licensed-button">REQUEST DOCUMENTATION</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section" id="about">
+        <div class="about-container">
+            <div class="about-text">
+                <h2>About Us</h2>
+                <h3 style="color: #004D99; margin-bottom: 15px;">Can Healthcare Supplier</h3>
+                <p>Can Healthcare Supplier is a trusted healthcare product distributor and a sister company to PB Pharma, focused on bridging the gap between manufacturers and healthcare providers. We are committed to ensuring a steady and reliable supply of essential medical and pharmaceutical products to our clients.</p>
+                <p>Leveraging the extensive network and decades of experience from our sister company, we provide solutions that contribute to better patient outcomes and operational success for our partners. Our mission is to make healthcare supply chains more efficient, accessible, and reliable.</p>
+                <div class="experience-badge">
+                    <h3>25+ Years Of Experience</h3>
+                    <p>Through our parent company's legacy and our dedicated team</p>
+                </div>
+            </div>
+            <div class="about-image">
+                <div style="text-align: center;">
+                    <div style="font-size: 80px; margin-bottom: 20px;">🏥</div>
+                    <p>Trusted Healthcare Partnership</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="why-section">
+        <div class="why-container">
+            <div class="section-header">
+                <div class="label">WHY</div>
+                <h2>Why Choose Us</h2>
+            </div>
+            <div class="why-cards">
+                <div class="why-card">
+                    <div class="why-card-icon">👥</div>
+                    <h3>Outstanding Service</h3>
+                    <p>Our dedicated team provides personalized support and proactive solutions to manage your supply needs efficiently and effectively.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-card-icon">💰</div>
+                    <h3>Competitive Pricing</h3>
+                    <p>Through strategic sourcing and a streamlined supply chain, we offer cost-effective solutions without compromising on quality.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-card-icon">✓</div>
+                    <h3>Quality Products</h3>
+                    <p>We supply a curated selection of high-quality medical and pharmaceutical products from certified and reputable global partners.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services-section" id="services">
+        <div class="services-container">
+            <div class="services-header">
+                <div class="label">OUR SERVICES</div>
+                <h2>Comprehensive Supply Solutions</h2>
+                <p>Through an extensive network of approved suppliers and partners, we deliver products to healthcare professionals operating in pharmacies, hospitals, clinics, and specialized facilities.</p>
+            </div>
+            <div class="services-cards">
+                <div class="service-card">
+                    <h3>Pharmacies & Clinics</h3>
+                    <p>Fast and reliable supply of essential pharmaceuticals and medical consumables to keep your operations running smoothly. Within 24 hours of contact, we assign a dedicated representative.</p>
+                    <a href="#contact" class="service-link">MORE INFO →</a>
+                </div>
+                <div class="service-card">
+                    <h3>Hospitals & Medical Centers</h3>
+                    <p>Priority access to bulk orders and specialized equipment to support critical care and large-scale medical facilities. We place all hospital orders on priority status.</p>
+                    <a href="#contact" class="service-link">MORE INFO →</a>
+                </div>
+                <div class="service-card">
+                    <h3>Specialized Logistics</h3>
+                    <p>Expertise in managing complex logistics, including temperature-controlled and cold-chain shipping for sensitive products. Our boxes are qualified for up to 72 hours of protection.</p>
+                    <a href="#contact" class="service-link">MORE INFO →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Way of Working Section -->
+    <section class="working-section">
+        <div class="working-container">
+            <div class="working-header">
+                <div class="label">WAY OF WORKING</div>
+                <h2>Our Working Process</h2>
+            </div>
+            <div class="working-steps">
+                <div class="step">
+                    <div class="step-number">01</div>
+                    <h3>Initial Inquiry</h3>
+                    <p>Fill out our online form or contact us directly with your specific product needs. Provide details such as product name, quantity, and any special requirements.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">02</div>
+                    <h3>Customized Quote</h3>
+                    <p>Our team will review your inquiry and promptly prepare a customized quote tailored to your needs with competitive pricing and delivery options.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">03</div>
+                    <h3>Order Fulfillment</h3>
+                    <p>Upon confirmation, we manage procurement, quality check, and efficient delivery of your order to ensure your satisfaction.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+        <div class="contact-container">
+            <div class="contact-header">
+                <h2>Contact Us</h2>
+                <p>Got questions? Get in touch with our team!</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info-box">
+                    <h3>Get in Touch</h3>
+                    <p>For general enquiries including product availability and supply issues, please contact us via email or by filling the form. Our team will reply within 24 hours.</p>
+                    <p><strong>Email:</strong> info@canhealthcaresupplier.com</p>
+                    <p><strong>Phone:</strong> (888) 555-5267</p>
+                    <p><strong>Address:</strong></p>
+                    <p>123 Healthcare Avenue, Suite 500<br>Toronto, ON, Canada M5V 3A8</p>
+                </div>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Your Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Your Message (Optional)</label>
+                        <textarea id="message" name="message"></textarea>
+                    </div>
+                    <button type="submit" class="form-submit">SEND MESSAGE</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Can Healthcare Supplier. All Rights Reserved.</p>
+            <p>A Sister Company of <a href="https://pbpharma.com/" target="_blank">PB Pharma Canada</a></p>
+            <p style="margin-top: 15px; font-size: 12px;">Committed to quality healthcare supply solutions | Licensed and Certified</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Form submission handler
+        document.querySelector('.contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! Our team will contact you within 24 hours.');
+            this.reset();
+        });
+
+        // Get In Touch button functionality
+        document.querySelectorAll('.cta-button').forEach(button => {
+            button.addEventListener('click', function() {
+                const contactSection = document.querySelector('#contact');
+                if (contactSection) {
+                    contactSection.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
