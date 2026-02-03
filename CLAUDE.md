@@ -9,7 +9,12 @@ Can Healthcare Supplier is a static single-page website for a healthcare product
 ## File Structure
 
 - `index.html` - Main website file containing all HTML structure, embedded CSS styles, and JavaScript functionality
-- `logo.jpg` - Company logo image
+- `logo.png` - Primary company logo (used in header)
+- `logo.jpg` - Alternative logo image
+- `new-logo.png` - Updated logo asset
+- `favicon.ico` / `favicon.png` - Browser favicon files
+- `CNAME` - GitHub Pages custom domain configuration
+- `guidelines-and-content/` - Brand guidelines and content documentation
 
 ## Development
 
@@ -26,13 +31,16 @@ python3 -m http.server 8000
 **Testing changes:**
 Simply open or refresh `index.html` in a web browser. No build process required.
 
+**Deployment:**
+The site is deployed via GitHub Pages with a custom domain (configured in `CNAME`). Changes pushed to the master branch are automatically published.
+
 ## Code Architecture
 
 This is a single-page application with:
 
-- **Embedded CSS** (lines 7-705): All styles are in a `<style>` tag within the `<head>`
-- **HTML structure** (lines 708-908): Semantic sections including header, hero, about, services, products, contact, and footer
-- **Embedded JavaScript** (lines 910-941): Client-side functionality for smooth scrolling, form handling, and CTA buttons
+- **Embedded CSS** (lines 8-718): All styles are in a `<style>` tag within the `<head>`
+- **HTML structure** (lines 720-920): Semantic sections including header, hero, about, services, products, contact, and footer
+- **Embedded JavaScript** (lines 921-952): Client-side functionality for smooth scrolling, form handling, and CTA buttons
 
 **Color scheme:**
 - Primary blue: `#004D99`
@@ -60,13 +68,21 @@ All interactivity is handled by vanilla JavaScript at the bottom of `index.html`
 
 ## Responsive Design
 
-The site includes mobile-responsive CSS with a breakpoint at 768px (lines 670-705). Grid layouts collapse to single columns on smaller screens.
+The site includes mobile-responsive CSS with a breakpoint at 768px (lines 677-718). Grid layouts collapse to single columns on smaller screens.
 
 ## Contact Information
 
 - Email: info@canhealthcaresupplier.com
 - Phone: (888) 555-5267
 - Address: 123 Healthcare Avenue, Suite 500, Toronto, ON, Canada M5V 3A8
+
+## Brand Guidelines
+
+The `guidelines-and-content/` directory contains:
+- `color_guidelines.jpg` - Brand color specifications and visual guidelines
+- `new_content.docx` - Content updates and marketing copy
+
+Refer to these files when making design or content changes to maintain brand consistency.
 
 ## Related Company
 
