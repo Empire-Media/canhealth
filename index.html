@@ -16,7 +16,7 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
             background: #F7FFFF;
-            color: #333;
+            color: #035373;
         }
 
         /* Header and Navigation */
@@ -452,6 +452,30 @@
             text-align: center;
         }
 
+        .service-list {
+            list-style: none;
+            padding-left: 0;
+            margin-bottom: 15px;
+        }
+
+        p.service-list-title {
+            margin-top: 0;
+            margin-bottom: 10px;
+            font-weight: 600;
+            color: #035373;
+        }
+
+        .service-list li {
+            padding: 0;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .service-list li span {
+            position: absolute;
+            left: 0;
+        }
+
         /* Way of Working Section */
         .working-section {
             padding: 80px 20px;
@@ -725,8 +749,8 @@
         /* Responsive Design */
         @media (max-width: 768px) {
             nav ul {
-                flex-direction: column;
-                gap: 15px;
+                flex-direction: row;
+                gap: 8px;
             }
 
             .hero h1 {
@@ -762,6 +786,14 @@
             .logo img {
                 height: 50px;
                 max-width: 200px;
+            }
+            .contact-info {
+                display: flex;
+                gap: 0;
+                flex-direction: column;
+            }
+            .header-top{
+                padding: 10px;
             }
         }
     </style>
@@ -877,69 +909,39 @@
                 <div class="service-card">
                     <h3>Pharmacies & Retail Healthcare</h3>
                     <p>Supporting independent and chain pharmacies with consistent access to quality pharmaceuticals. We understand the daily challenges of inventory management and work to ensure your shelves stay stocked with the products your patients need.</p>
-                    <p style="margin-top: 15px; margin-bottom: 10px; font-weight: 600; color: #088589;">What We Deliver:</p>
-                    <ul style="list-style: none; padding-left: 0; margin-bottom: 15px;">
-                        <li style="padding: 5px 0; padding-left: 20px; position: relative;">
-                            <span style="position: absolute; left: 0;">•</span> Quick turnaround on product requests
-                        </li>
-                        <li style="padding: 5px 0; padding-left: 20px; position: relative;">
-                            <span style="position: absolute; left: 0;">•</span> Direct access to a dedicated account manager
-                        </li>
-                        <li style="padding: 5px 0; padding-left: 20px; position: relative;">
-                            <span style="position: absolute; left: 0;">•</span> Transparent pricing with no hidden fees
-                        </li>
-                        <li style="padding: 5px 0; padding-left: 20px; position: relative;">
-                            <span style="position: absolute; left: 0;">•</span> Flexible minimum order requirements
-                        </li>
-                        <li style="padding: 5px 0; padding-left: 20px; position: relative;">
-                            <span style="position: absolute; left: 0;">•</span> Authentic products with full traceability
-                        </li>
+                    <p class="service-list-title">What We Deliver:</p>
+                    <ul class="service-list">
+                        <li><span>•</span> Quick turnaround on product requests</li>
+                        <li><span>•</span> Direct access to a dedicated account manager</li>
+                        <li><span>•</span> Transparent pricing with no hidden fees</li>
+                        <li><span>•</span> Flexible minimum order requirements</li>
+                        <li><span>•</span> Authentic products with full traceability</li>
                     </ul>
                     <a href="#contact" class="service-link">GET STARTED →</a>
                 </div>
                 <div class="service-card">
                     <h3>Hospitals & Medical Institutions</h3>
                     <p>Large-scale healthcare facilities require dependable pharmaceutical partners. We specialize in fulfilling complex orders for hospitals, medical centers, and healthcare networks operating at any scale.</p>
-                    <p style="margin-top: 15px; margin-bottom: 10px; font-weight: 600; color: #088589;">What Sets Us Apart:</p>
-                    <ul style="list-style: none; padding-left: 0; margin-bottom: 15px;">
-                        <li style="padding: 5px 0; padding-left: 20px; position: relative;">
-                            <span style="position: absolute; left: 0;">•</span> Capacity for high-volume orders
-                        </li>
-                        <li style="padding: 5px 0; padding-left: 20px; position: relative;">
-                            <span style="position: absolute; left: 0;">•</span> Access to specialty and hard-to-find medications
-                        </li>
-                        <li style="padding: 5px 0; padding-left: 20px; position: relative;">
-                            <span style="position: absolute; left: 0;">•</span> Coordinated delivery scheduling
-                        </li>
-                        <li style="padding: 5px 0; padding-left: 20px; position: relative;">
-                            <span style="position: absolute; left: 0;">•</span> Comprehensive regulatory documentation
-                        </li>
-                        <li style="padding: 5px 0; padding-left: 20px; position: relative;">
-                            <span style="position: absolute; left: 0;">•</span> Direct communication with your procurement team
-                        </li>
+                    <p class="service-list-title">What Sets Us Apart:</p>
+                    <ul class="service-list">
+                        <li><span>•</span> Capacity for high-volume orders</li>
+                        <li><span>•</span> Access to specialty and hard-to-find medications</li>
+                        <li><span>•</span> Coordinated delivery scheduling</li>
+                        <li><span>•</span> Comprehensive regulatory documentation</li>
+                        <li><span>•</span> Direct communication with your procurement team</li>
                     </ul>
                     <a href="#contact" class="service-link">LEARN MORE →</a>
                 </div>
                 <div class="service-card">
                     <h3>Cold-Chain Distribution</h3>
                     <p>Temperature-sensitive medications demand specialized handling. Our cold-chain logistics ensure biologics, vaccines, insulin, and other critical products maintain proper temperature from warehouse to your facility.</p>
-                    <p style="margin-top: 15px; margin-bottom: 10px; font-weight: 600; color: #088589;">Our Cold-Chain Expertise:</p>
-                    <ul style="list-style: none; padding-left: 0; margin-bottom: 15px;">
-                        <li style="padding: 5px 0; padding-left: 20px; position: relative;">
-                            <span style="position: absolute; left: 0;">•</span> Advanced thermal packaging technology
-                        </li>
-                        <li style="padding: 5px 0; padding-left: 20px; position: relative;">
-                            <span style="position: absolute; left: 0;">•</span> Continuous temperature monitoring and logging
-                        </li>
-                        <li style="padding: 5px 0; padding-left: 20px; position: relative;">
-                            <span style="position: absolute; left: 0;">•</span> Validated shipping protocols for 72+ hour transit
-                        </li>
-                        <li style="padding: 5px 0; padding-left: 20px; position: relative;">
-                            <span style="position: absolute; left: 0;">•</span> International shipping compliance
-                        </li>
-                        <li style="padding: 5px 0; padding-left: 20px; position: relative;">
-                            <span style="position: absolute; left: 0;">•</span> Full cold-chain documentation for regulatory needs
-                        </li>
+                    <p class="service-list-title">Our Cold-Chain Expertise:</p>
+                    <ul class="service-list">
+                        <li><span>•</span> Advanced thermal packaging technology</li>
+                        <li><span>•</span> Continuous temperature monitoring and logging</li>
+                        <li><span>•</span> Validated shipping protocols for 72+ hour transit</li>
+                        <li><span>•</span> International shipping compliance</li>
+                        <li><span>•</span> Full cold-chain documentation for regulatory needs</li>
                     </ul>
                     <a href="#contact" class="service-link">INQUIRE NOW →</a>
                 </div>
