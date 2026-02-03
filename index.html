@@ -297,6 +297,36 @@
             margin: 0;
             padding: 0;
         }
+
+        /* Mission and Vision */
+        .mission-vision-container {
+            max-width: 1200px;
+            margin: 60px auto 0;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .mission-vision-card {
+            background: linear-gradient(135deg, #A84C8F, #9D4B8B);
+            color: #fff;
+            padding: 40px;
+            border-radius: 20px;
+            text-align: left;
+        }
+
+        .mission-vision-card h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: #FDB913;
+        }
+
+        .mission-vision-card p {
+            font-size: 16px;
+            line-height: 1.8;
+            color: #fff;
+        }
+
         /* Why Choose Us Section */
         .why-section {
             padding: 80px 20px;
@@ -847,7 +877,8 @@
 
             .about-container,
             .contact-content,
-            .licensed-content {
+            .licensed-content,
+            .mission-vision-container {
                 grid-template-columns: 1fr;
             }
 
@@ -939,20 +970,24 @@
                 <p>CAN Healthcare Supplier is a Dubai, UAE-based licensed pharmaceutical wholesaler dedicated to serving global healthcare professionals facing supply challenges and product shortages. We leverage decades of industry experience and an extensive international network to deliver solutions that matter.</p>
                 <p>With an unwavering commitment to quality and customer satisfaction at the core of our business practice, we connect healthcare providers to a secure global supply chain. We contribute to their long-term success by providing access to essential pharmaceuticals, supporting patient follow-up and treatment continuity, and ensuring the best possible patient outcomes.</p>
                 <p>Our strategic location in the UAE allows us to serve healthcare facilities across multiple continents efficiently. We utilize proven sourcing methods and our extensive network of reputable licensed pharmaceutical partners to locate and deliver the products you need in a timely manner.</p>
-                <div class="experience-badge" style="margin-top: 30px;">
-                    <h3 style="font-size: 20px; margin-bottom: 10px;">Our Mission</h3>
-                    <p>Make the connection and we'll handle the rest. Gain access to premium pharmaceutical products through our cost-effective global approach. Our efficient delivery service and dedicated support ensure your complete satisfaction.</p>
-                </div>
-                <div class="experience-badge" style="margin-top: 20px;">
-                    <h3 style="font-size: 20px; margin-bottom: 10px;">Our Vision</h3>
-                    <p>Our knowledgeable team of pharmaceutical supply consultants is committed to understanding your unique challenges, answering your questions, and matching your current and future needs with world-class products from certified sources.</p>
-                </div>
             </div>
             <div class="about-image">
                 <div style="text-align: center;">
                     <div style="font-size: 80px; margin-bottom: 20px;">🏥</div>
                     <p>Trusted Healthcare Partnership</p>
                 </div>
+            </div>
+        </div>
+
+        <!-- Mission and Vision -->
+        <div class="mission-vision-container">
+            <div class="mission-vision-card">
+                <h3>Our Mission</h3>
+                <p>Make the connection and we'll handle the rest. Gain access to premium pharmaceutical products through our cost-effective global approach. Our efficient delivery service and dedicated support ensure your complete satisfaction.</p>
+            </div>
+            <div class="mission-vision-card">
+                <h3>Our Vision</h3>
+                <p>Our knowledgeable team of pharmaceutical supply consultants is committed to understanding your unique challenges, answering your questions, and matching your current and future needs with world-class products from certified sources.</p>
             </div>
         </div>
     </section>
