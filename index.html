@@ -15,12 +15,13 @@
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
+            background: #F7FFFF;
             color: #333;
         }
 
         /* Header and Navigation */
         header {
-            background-color: #ffffff;
+            background: #F7FFFF;
             padding: 15px 0;
             position: sticky;
             top: 0;
@@ -29,8 +30,8 @@
         }
 
         .header-top {
-            background-color: #2E8B91;
-            padding: 10px 0;
+            background: linear-gradient(90.01deg, #035373 0.01%, #8DDDDF 181.07%);
+            padding: 10px 10px;
             font-size: 14px;
             color: #ffffff;
         }
@@ -46,7 +47,7 @@
 
         .contact-info {
             display: flex;
-            gap: 30px;
+            gap: 50px;
         }
 
         .contact-info a {
@@ -61,7 +62,7 @@
 
         .nav-container {
             max-width: 1200px;
-            margin: 0 auto;
+            margin: 10px auto 0 auto;
             padding: 0 20px;
             display: flex;
             justify-content: space-between;
@@ -81,16 +82,24 @@
             height: 60px;
             max-width: 300px;
             object-fit: contain;
+            margin: 10px 10px 0 10px;
         }
 
         nav ul {
             display: flex;
             list-style: none;
             gap: 30px;
+            padding: 20px;            
+            
+        }
+
+        .nav-menu{
+            background-color: #DDFDFE;
+            border-radius: 25px;
         }
 
         nav a {
-            color: #333;
+            color:#035373;
             text-decoration: none;
             font-weight: 500;
             transition: color 0.3s;
@@ -101,14 +110,19 @@
         }
 
         .cta-button {
-            background-color: #3A9FA5;
-            color: #fff;
+            background: linear-gradient(90deg, #088589 0%, #8DDDDF 127.59%);
+            color: #FDEB9D;
             padding: 12px 25px;
             border: none;
             border-radius: 25px;
             cursor: pointer;
-            font-weight: bold;
             transition: background-color 0.3s;
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 100%;
+            letter-spacing: 0%;
+            vertical-align: middle;
+
         }
 
         .cta-button:hover {
@@ -117,13 +131,13 @@
 
         /* Hero Section */
         .hero {
-            background: linear-gradient(135deg, #6DD5DD 0%, #3A9FA5 100%);
+            background-image: url("df756a094a9c88f7a11108cc1692abe3b3eb288b.png");
             background-size: cover;
             background-position: center;
             color: #333;
             padding: 120px 20px;
             text-align: left;
-            min-height: 500px;
+            min-height: 400px;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -138,25 +152,29 @@
         }
 
         .hero h1 {
-            font-size: 48px;
-            margin-bottom: 20px;
-            color: #9D4B8B;
-            text-shadow: none;
+            font-weight: 900;
+            font-size: 40px;
+            line-height: 100%;
+            vertical-align: middle;
+            color:#8C4287
+
         }
 
         .hero p {
+            font-weight: 600;
             font-size: 18px;
-            margin-bottom: 30px;
-            max-width: 600px;
-            color: #333;
-            text-shadow: none;
+            line-height: 100%;
+            vertical-align: middle;
+            color:#035373;
+            margin: 30px 0;
         }
 
         .hero .cta-button {
-            background-color: #FDB913;
-            color: #333;
+            background: linear-gradient(90deg, #EBCE48 0%, #FFF6CC 127.59%);
+            color:#8C4287;;
             width: fit-content;
             font-weight: bold;
+            padding: 20px;
         }
 
         .hero .cta-button:hover {
@@ -165,8 +183,8 @@
 
         /* Licensed Distributor Section */
         .licensed-section {
-            background: linear-gradient(135deg, #6DD5DD 0%, #3A9FA5 100%);
-            color: #333;
+            background: linear-gradient(179.49deg, #BCEFFE 0.44%, #4AB7BB 99.56%);
+            color: #035373;
             padding: 60px 20px;
             text-align: center;
             margin: 20px;
@@ -193,18 +211,21 @@
         }
 
         .licensed-text p {
-            font-size: 16px;
-            line-height: 1.8;
+            font-size: 18px;
+            font-weight: 600;
+            line-height: 1.3;
+            vertical-align: middle;
         }
 
         .licensed-button {
-            background-color: #FDB913;
-            color: #333;
+            background: linear-gradient(90deg, #EBCE48 39.87%, #FFF6CC 127.59%);
+            color: #8C4287;
             padding: 12px 30px;
             border: none;
             border-radius: 25px;
             cursor: pointer;
-            font-weight: bold;
+            font-weight: 700;
+            font-size: 16px;
             margin-top: 20px;
             transition: background-color 0.3s;
         }
@@ -230,7 +251,7 @@
 
         .about-text h2 {
             font-size: 32px;
-            color: #9D4B8B;
+            color: #8C4287;
             margin-bottom: 20px;
         }
 
@@ -238,7 +259,8 @@
             font-size: 16px;
             line-height: 1.8;
             margin-bottom: 15px;
-            color: #555;
+            font-weight: 600;
+            color: #035373;
         }
 
         .about-image {
@@ -255,25 +277,28 @@
         }
 
         .experience-badge {
-            background: linear-gradient(135deg, #A84C8F, #9D4B8B);
-            color: #fff;
-            padding: 20px;
-            border-radius: 20px;
+            background: linear-gradient(90deg, #8C4287 39.87%, #D1A000 127.59%);
+            color: #F7FFFF;
+            padding: 10px;
+            border-radius: 50px;
             margin-top: 20px;
             text-align: center;
         }
 
         .experience-badge h3 {
             font-size: 24px;
-            margin-bottom: 10px;
+            margin-bottom: 0;
         }
-
+        .experience-badge p{
+            color: #F7FFFF;
+            margin: 0;
+            padding: 0;
+        }
         /* Why Choose Us Section */
         .why-section {
             padding: 80px 20px;
             background-color: #fff;
         }
-
         .why-container {
             max-width: 1200px;
             margin: 0 auto;
@@ -294,7 +319,8 @@
 
         .section-header h2 {
             font-size: 40px;
-            color: #3A9FA5;
+            color: #035373 ;
+            font-weight: 900;
             margin-top: 10px;
         }
 
@@ -305,11 +331,11 @@
         }
 
         .why-card {
-            background-color: #f9f9f9;
+            background-color: #DDFDFE;
             padding: 40px;
             border-radius: 20px;
             text-align: center;
-            border-top: 5px solid #FDB913;
+            border-top: 5px solid #E5B60B;
             transition: transform 0.3s, box-shadow 0.3s;
         }
 
@@ -326,25 +352,26 @@
 
         .why-card h3 {
             font-size: 22px;
-            color: #3A9FA5;
+            color: #8C4287;
             margin-bottom: 15px;
         }
 
         .why-card p {
-            color: #666;
+            color: #035373;
             line-height: 1.8;
         }
 
         /* Services Section */
         .services-section {
-            background-color: #ffffff;
-            color: #333;
             padding: 80px 20px;
         }
 
         .services-container {
+            background-color: #FFF3D1;
+            border-radius: 30px;
             max-width: 1200px;
             margin: 0 auto;
+            padding: 50px 20px;
         }
 
         .services-header {
@@ -363,16 +390,19 @@
         .services-header h2 {
             font-size: 40px;
             margin-top: 10px;
-            color: #9D4B8B;
+            color: #8C4287;
+            font-weight: 900;
         }
 
         .services-header p {
-            font-size: 16px;
+            font-size: 18px;
             margin-top: 20px;
-            max-width: 800px;
+            max-width: 1000px;
             margin-left: auto;
             margin-right: auto;
-            color: #333;
+            color: #035373;
+            font-weight: 600;
+            text-align: left;
         }
 
         .services-cards {
@@ -383,15 +413,16 @@
         }
 
         .service-card {
-            background-color: #FFF9E6;
+            background-color: #F7FFFF;
             padding: 40px;
             border-radius: 20px;
-            border: 3px solid #FDB913;
+            border: 3px solid #E5B60B;
             transition: all 0.3s;
+            display: flex;
+    flex-direction: column;
         }
 
         .service-card:hover {
-            background-color: #FFF3D1;
             transform: translateY(-5px);
             box-shadow: 0 10px 30px rgba(253, 185, 19, 0.3);
         }
@@ -399,25 +430,23 @@
         .service-card h3 {
             font-size: 22px;
             margin-bottom: 15px;
-            color: #333;
+            color: #D1AB00;
         }
 
         .service-card p {
             font-size: 15px;
             line-height: 1.8;
             margin-bottom: 20px;
-            color: #333;
+            font-weight: 600;
+            color: #035373;
         }
 
         .service-link {
-            color: #3A9FA5;
+            color: #D1AB00;
             text-decoration: none;
             font-weight: bold;
             transition: color 0.3s;
-        }
-
-        .service-link:hover {
-            color: #2E8B91;
+            text-align: center;
         }
 
         /* Way of Working Section */
@@ -437,7 +466,7 @@
         }
 
         .working-header .label {
-            color: #3A9FA5;
+            color: #035373;
             font-weight: bold;
             font-size: 14px;
             text-transform: uppercase;
@@ -446,8 +475,9 @@
 
         .working-header h2 {
             font-size: 40px;
-            color: #3A9FA5;
+            color: #035373;
             margin-top: 10px;
+            font-weight: 900;
         }
 
         .working-steps {
@@ -458,11 +488,15 @@
 
         .step {
             text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
 
         .step-number {
-            background-color: #3A9FA5;
-            color: #ffffff;
+            background-color: #088589;
+            color: #EBCE48;
             width: 60px;
             height: 60px;
             border-radius: 50%;
@@ -470,19 +504,22 @@
             align-items: center;
             justify-content: center;
             font-size: 28px;
-            font-weight: bold;
+            font-weight: 600;
             margin: 0 auto 20px;
         }
 
         .step h3 {
             font-size: 22px;
-            color: #3A9FA5;
+            color: #8C4287;
+            font-weight: 700;
             margin-bottom: 15px;
         }
 
         .step p {
-            color: #666;
+            color: #035373;
+            font-weight: 600;
             line-height: 1.8;
+            width: 300px;
         }
 
         /* Products Section */
@@ -741,7 +778,7 @@
             <div class="logo">
                 <img src="new-logo.png" alt="Can Healthcare Supplier">
             </div>
-            <nav>
+            <nav class="nav-menu">
                 <ul>
                     <li><a href="#home">HOME</a></li>
                     <li><a href="#about">ABOUT US</a></li>
@@ -769,7 +806,7 @@
             <div class="licensed-text">
                 <h2>Quality and Compliance Assured</h2>
                 <p>As a sister company to PB Pharma, we uphold the highest standards of quality and regulatory compliance in all our operations. Upon request, we can provide you with documentation of our licensing and certifications from the relevant health authorities.</p>
-                <button class="licensed-button">REQUEST DOCUMENTATION</button>
+                <button class="licensed-button">REQUEST <br> DOCUMENTATION</button>
             </div>
         </div>
     </section>
@@ -779,7 +816,6 @@
         <div class="about-container">
             <div class="about-text">
                 <h2>About Us</h2>
-                <h3 style="color: #004D99; margin-bottom: 15px;">Can Healthcare Supplier</h3>
                 <p>Can Healthcare Supplier is a trusted healthcare product distributor and a sister company to PB Pharma, focused on bridging the gap between manufacturers and healthcare providers. We are committed to ensuring a steady and reliable supply of essential medical and pharmaceutical products to our clients.</p>
                 <p>Leveraging the extensive network and decades of experience from our sister company, we provide solutions that contribute to better patient outcomes and operational success for our partners. Our mission is to make healthcare supply chains more efficient, accessible, and reliable.</p>
                 <div class="experience-badge">
@@ -800,7 +836,6 @@
     <section class="why-section">
         <div class="why-container">
             <div class="section-header">
-                <div class="label">WHY</div>
                 <h2>Why Choose Us</h2>
             </div>
             <div class="why-cards">
@@ -827,7 +862,6 @@
     <section class="services-section" id="services">
         <div class="services-container">
             <div class="services-header">
-                <div class="label">OUR SERVICES</div>
                 <h2>Comprehensive Supply Solutions</h2>
                 <p>Through an extensive network of approved suppliers and partners, we deliver products to healthcare professionals operating in pharmacies, hospitals, clinics, and specialized facilities.</p>
             </div>
@@ -855,7 +889,6 @@
     <section class="working-section">
         <div class="working-container">
             <div class="working-header">
-                <div class="label">WAY OF WORKING</div>
                 <h2>Our Working Process</h2>
             </div>
             <div class="working-steps">
