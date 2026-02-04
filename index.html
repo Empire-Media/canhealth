@@ -1112,7 +1112,18 @@
                     <p><strong>Address:</strong></p>
                     <p>SAIF Executive Office P8-11-69 Sharjah<br>Dubai, United Arab Emirates</p>
                 </div>
-                <form class="contact-form">
+                <!-- Web3Forms Integration - FREE Unlimited Submissions -->
+                <!-- To change notification email: Create new form at web3forms.com and update access_key -->
+                <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+                    <!-- Web3Forms Access Key -->
+                    <input type="hidden" name="access_key" value="a53ce5ee-5209-4651-b2a1-98a9cbbb67be">
+                    <!-- Optional: Redirect after submission -->
+                    <input type="hidden" name="redirect" value="https://canhealthcaresupplier.com/#contact">
+                    <!-- Form subject for email -->
+                    <input type="hidden" name="subject" value="New Contact Form Submission - CAN Healthcare Supplier">
+                    <!-- Form name for identification -->
+                    <input type="hidden" name="from_name" value="CAN Healthcare Contact Form">
+
                     <div class="form-group">
                         <label for="name">Full Name *</label>
                         <input type="text" id="name" name="name" required>
@@ -1212,11 +1223,11 @@
             });
         });
 
-        // Form submission handler
+        // Form submission handler - Show loading state
         document.querySelector('.contact-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Thank you for your message! Our team will contact you within 24 hours.');
-            this.reset();
+            const submitBtn = this.querySelector('.form-submit');
+            submitBtn.textContent = 'SENDING...';
+            submitBtn.disabled = true;
         });
 
         // Get In Touch button functionality
