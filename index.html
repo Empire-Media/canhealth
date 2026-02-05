@@ -91,12 +91,15 @@
         nav ul {
             display: flex;
             list-style: none;
-            gap: 30px;
-            padding: 20px;            
-            
+            gap: 50px;
+            padding: 10px;            
+            justify-content: center;
+            align-items:center ;
         }
 
         .nav-menu{
+            width: 600px;
+            height: 50px;
             background-color: #DDFDFE;
             border-radius: 25px;
         }
@@ -109,7 +112,7 @@
         }
 
         nav a:hover {
-            color: #3A9FA5;
+            text-decoration: underline;
         }
 
         .cta-button {
@@ -119,7 +122,7 @@
             border: none;
             border-radius: 25px;
             cursor: pointer;
-            transition: background-color 0.3s;
+            transition: transform 0.2s ease;
             font-weight: 700;
             font-size: 18px;
             line-height: 100%;
@@ -129,16 +132,16 @@
         }
 
         .cta-button:hover {
-            background-color: #2E8B91;
+            transform: scale(1.05);
         }
 
         /* Hero Section */
         .hero {
-            background-image: url("df756a094a9c88f7a11108cc1692abe3b3eb288b.png");
+            background-image: url("edited 2 medical-background-with-flat-icons-symbols 1.png");
             background-size: cover;
             background-position: center;
             color: #333;
-            padding: 120px 20px;
+            padding: 70px 20px;
             text-align: left;
             min-height: 400px;
             display: flex;
@@ -174,21 +177,22 @@
 
         .hero .cta-button {
             background: linear-gradient(90deg, #EBCE48 0%, #FFF6CC 127.59%);
-            color:#8C4287;;
-            width: fit-content;
+            color:#8C4287;
             font-weight: bold;
-            padding: 20px;
+            padding: 10px;
+            width: 235px;
+            height: 50px;
         }
 
         .hero .cta-button:hover {
-            background-color: #E5A712;
+            transform: scale(1.05);
         }
 
         /* Licensed Distributor Section */
         .licensed-section {
             background: linear-gradient(179.49deg, #BCEFFE 0.44%, #4AB7BB 99.56%);
             color: #035373;
-            padding: 60px 20px;
+            padding: 70px 20px;
             text-align: center;
             margin: 20px;
             border-radius: 20px;
@@ -209,7 +213,7 @@
         }
 
         .licensed-text h2 {
-            font-size: 36px;
+            font-size: 40px;
             margin-bottom: 20px;
         }
 
@@ -230,17 +234,16 @@
             font-weight: 700;
             font-size: 16px;
             margin-top: 20px;
-            transition: background-color 0.3s;
+            transition: transform 0.2s ease;
         }
 
         .licensed-button:hover {
-            background-color: #E5A712;
+            transform: scale(1.05);
         }
 
         /* About Section */
         .about-section {
-            padding: 80px 20px;
-            background-color: #f9f9f9;
+            padding: 50px 20px 0 20px; /* 50px top because licensed-section has 20px margin-bottom */
         }
 
         .about-container {
@@ -253,7 +256,7 @@
         }
 
         .about-text h2 {
-            font-size: 32px;
+            font-size: 40px;
             color: #8C4287;
             margin-bottom: 20px;
         }
@@ -316,7 +319,7 @@
         }
 
         .mission-vision-card h3 {
-            font-size: 24px;
+            font-size: 22px;
             margin-bottom: 15px;
             color: #FDB913;
         }
@@ -329,7 +332,7 @@
 
         /* Why Choose Us Section */
         .why-section {
-            padding: 80px 20px;
+            padding: 70px 20px 0 20px;
             background-color: #fff;
         }
         .why-container {
@@ -396,11 +399,11 @@
 
         /* Services Section */
         .services-section {
-            padding: 80px 20px;
+            padding: 20px 20px 0 20px;
         }
 
         .services-container {
-            background-color: #FFF3D1;
+            background-color: #FFF7FE;
             border-radius: 30px;
             max-width: 1200px;
             margin: 0 auto;
@@ -447,12 +450,12 @@
 
         .service-card {
             background-color: #F7FFFF;
-            padding: 40px;
+            padding: 20px;
             border-radius: 20px;
             border: 3px solid #E5B60B;
             transition: all 0.3s;
             display: flex;
-    flex-direction: column;
+            flex-direction: column;
         }
 
         .service-card:hover {
@@ -462,16 +465,20 @@
 
         .service-card h3 {
             font-size: 22px;
-            margin-bottom: 15px;
+            height: 70px;
+            margin-bottom: 7px;
             color: #D1AB00;
         }
 
         .service-card p {
-            font-size: 15px;
+            font-size: 16px;
             line-height: 1.8;
-            margin-bottom: 20px;
             font-weight: 600;
             color: #035373;
+        }
+
+        .service-card-content {
+            flex: 1;
         }
 
         .service-link {
@@ -482,6 +489,10 @@
             text-align: center;
         }
 
+        .service-link:hover{
+            text-decoration: underline;
+        }
+
         .service-list {
             list-style: none;
             padding-left: 0;
@@ -490,14 +501,14 @@
 
         p.service-list-title {
             margin-top: 0;
-            margin-bottom: 10px;
-            font-weight: 600;
+            font-weight: 700;
             color: #035373;
         }
 
         .service-list li {
             padding: 0;
             padding-left: 20px;
+            font-weight: 600;
             position: relative;
         }
 
@@ -508,8 +519,8 @@
 
         /* Way of Working Section */
         .working-section {
-            padding: 80px 20px;
-            background-color: #f9f9f9;
+            padding: 10px 20px 50px 20px; /* 50px bottom because contact-section has 20px margin-top */
+            background-color: #FFFCEF;
         }
 
         .working-container {
@@ -577,6 +588,7 @@
             font-weight: 600;
             line-height: 1.8;
             width: 300px;
+            height: 200px;
         }
 
         /* Products Section */
@@ -639,11 +651,10 @@
 
         /* Contact Section */
         .contact-section {
-            padding: 80px 20px;
-            background: linear-gradient(135deg, #3A9FA5 0%, #2E8B91 100%);
+            margin-top: 20px;
+            padding:20px;
+            background: linear-gradient(90.01deg, #035373 0.01%, #8DDDDF 181.07%);
             color: #fff;
-            margin: 20px;
-            border-radius: 20px;
         }
 
         .contact-container {
@@ -653,7 +664,8 @@
 
         .contact-header {
             text-align: center;
-            margin-bottom: 60px;
+            margin-bottom: 40px;
+            color: #EBCE48;
         }
 
         .contact-header h2 {
@@ -662,7 +674,7 @@
         }
 
         .contact-header p {
-            font-size: 16px;
+            font-size: 18px;
         }
 
         .contact-content {
@@ -673,26 +685,26 @@
         }
 
         .contact-info-box {
-            background-color: rgba(255, 255, 255, 0.15);
+            background-color: #71A4B5;
             padding: 40px;
             border-radius: 20px;
             border-left: 5px solid #FDB913;
         }
 
         .contact-info-box h3 {
-            font-size: 20px;
+            font-size: 18px;
             margin-bottom: 20px;
             color: #FDB913;
         }
 
         .contact-info-box p {
-            font-size: 15px;
+            font-size: 16px;
             line-height: 1.8;
             margin-bottom: 15px;
         }
 
         .contact-form {
-            background-color: rgba(255, 255, 255, 0.15);
+            background-color: #71A4B5;
             padding: 40px;
             border-radius: 20px;
         }
@@ -708,7 +720,8 @@
         }
 
         .form-group input,
-        .form-group textarea {
+        .form-group textarea,
+        .form-group select {
             width: 100%;
             padding: 12px;
             border: 2px solid #FDB913;
@@ -716,7 +729,7 @@
             font-family: inherit;
             font-size: 14px;
             background-color: rgba(255, 255, 255, 0.95);
-            color: #333;
+            color: #035373;
         }
 
         .form-group textarea {
@@ -733,32 +746,35 @@
         }
 
         .form-submit {
-            background-color: #FDB913;
-            color: #333;
+            background: linear-gradient(90deg, #EBCE48 0%, #FFF6CC 127.59%);
+            color: #8C4287;
+            font-weight: bold;
             padding: 12px 30px;
             border: none;
             border-radius: 25px;
             cursor: pointer;
-            font-weight: bold;
-            font-size: 16px;
-            transition: background-color 0.3s;
+            font-size: 18px;
             width: 100%;
         }
 
         .form-submit:hover {
-            background-color: #E5A712;
+            transform: scale(1.05);
+        }
+
+        /* Footer Separator */
+        .footer-separator {
+            border: none;
+            height: 2px;
+            background-color: #EBCE48;
+            max-width: 1200px;
+            margin: 70px auto 0;
         }
 
         /* Footer */
-        footer {
-            background-color: #2E8B91;
-            color: #fff;
-            padding: 40px 20px;
-            text-align: center;
-        }
-
         .footer-content {
             max-width: 1200px;
+            padding: 40px 0 20px;
+            text-align: center;
             margin: 0 auto;
         }
 
@@ -915,8 +931,8 @@
         <div class="header-top">
             <div class="header-top-content">
                 <div class="contact-info">
-                    <a href="mailto:info@canhealthcaresupplier.com"><svg width="20" height="16" viewBox="0 0 31 25" fill="none" xmlns="http://www.w3.org/2000/svg" style="vertical-align: middle; margin-right: 5px;"><path d="M27.9 0H3.1C1.395 0 0.0155 1.40625 0.0155 3.125L0 21.875C0 23.5938 1.395 25 3.1 25H27.9C29.605 25 31 23.5938 31 21.875V3.125C31 1.40625 29.605 0 27.9 0ZM27.9 6.25L15.5 14.0625L3.1 6.25V3.125L15.5 10.9375L27.9 3.125V6.25Z" fill="#DDFDFE"/></svg> Email: info@canhealthcaresupplier.com</a>
-                    <a href="tel:+971XXXXXXX"><svg width="20" height="19" viewBox="0 0 33 31" fill="none" xmlns="http://www.w3.org/2000/svg" style="vertical-align: middle; margin-right: 5px;"><path d="M23.0208 19.8875L22.1866 20.7136C22.1866 20.7136 20.2011 22.6757 14.7836 17.3182C9.36617 11.9606 11.3517 9.99846 11.3517 9.99846L11.876 9.47692C13.1721 8.19679 13.295 6.13984 12.1638 4.63724L9.85384 1.56821C8.45318 -0.291804 5.74903 -0.537983 4.14488 1.0485L1.26656 3.89323C0.472733 4.681 -0.0589303 5.69854 0.00523596 6.82914C0.170235 9.7231 1.48656 15.9469 8.82718 23.2082C16.6133 30.9072 23.9191 31.2136 26.9056 30.9364C27.8515 30.8489 28.6729 30.3711 29.3347 29.7146L31.938 27.1398C33.698 25.4019 33.203 22.4204 30.9517 21.2041L27.4501 19.3095C25.9724 18.5126 24.1757 18.746 23.0208 19.8875Z" fill="#DDFDFE"/></svg> Phone: +971 [XXXXXXX]</a>
+                    <a href="mailto:info@canhealthcaresupplier.com"><svg width="20" height="16" viewBox="0 0 31 25" fill="none" xmlns="http://www.w3.org/2000/svg" style="vertical-align: middle; margin-right: 5px;"><path d="M27.9 0H3.1C1.395 0 0.0155 1.40625 0.0155 3.125L0 21.875C0 23.5938 1.395 25 3.1 25H27.9C29.605 25 31 23.5938 31 21.875V3.125C31 1.40625 29.605 0 27.9 0ZM27.9 6.25L15.5 14.0625L3.1 6.25V3.125L15.5 10.9375L27.9 3.125V6.25Z" fill="#DDFDFE"/></svg> info@canhealthcaresupplier.com</a>
+                    <a href="tel:+971552031983"><svg width="20" height="19" viewBox="0 0 33 31" fill="none" xmlns="http://www.w3.org/2000/svg" style="vertical-align: middle; margin-right: 5px;"><path d="M23.0208 19.8875L22.1866 20.7136C22.1866 20.7136 20.2011 22.6757 14.7836 17.3182C9.36617 11.9606 11.3517 9.99846 11.3517 9.99846L11.876 9.47692C13.1721 8.19679 13.295 6.13984 12.1638 4.63724L9.85384 1.56821C8.45318 -0.291804 5.74903 -0.537983 4.14488 1.0485L1.26656 3.89323C0.472733 4.681 -0.0589303 5.69854 0.00523596 6.82914C0.170235 9.7231 1.48656 15.9469 8.82718 23.2082C16.6133 30.9072 23.9191 31.2136 26.9056 30.9364C27.8515 30.8489 28.6729 30.3711 29.3347 29.7146L31.938 27.1398C33.698 25.4019 33.203 22.4204 30.9517 21.2041L27.4501 19.3095C25.9724 18.5126 24.1757 18.746 23.0208 19.8875Z" fill="#DDFDFE"/></svg> +971 55 203 1983</a>
                 </div>
             </div>
         </div>
@@ -966,7 +982,6 @@
         <div class="about-container">
             <div class="about-text">
                 <h2>About Us</h2>
-                <h3 style="color: #088589; margin-bottom: 15px;">CAN Healthcare Supplier</h3>
                 <p>CAN Healthcare Supplier is a Dubai, UAE-based licensed pharmaceutical wholesaler dedicated to serving global healthcare professionals facing supply challenges and product shortages. We leverage decades of industry experience and an extensive international network to deliver solutions that matter.</p>
                 <p>With an unwavering commitment to quality and customer satisfaction at the core of our business practice, we connect healthcare providers to a secure global supply chain. We contribute to their long-term success by providing access to essential pharmaceuticals, supporting patient follow-up and treatment continuity, and ensuring the best possible patient outcomes.</p>
                 <p>Our strategic location in the UAE allows us to serve healthcare facilities across multiple continents efficiently. We utilize proven sourcing methods and our extensive network of reputable licensed pharmaceutical partners to locate and deliver the products you need in a timely manner.</p>
@@ -1028,41 +1043,47 @@
             <div class="services-cards">
                 <div class="service-card">
                     <h3>Pharmacies & Retail Healthcare</h3>
-                    <p>Supporting independent and chain pharmacies with consistent access to quality pharmaceuticals. We understand the daily challenges of inventory management and work to ensure your shelves stay stocked with the products your patients need.</p>
-                    <p class="service-list-title">What We Deliver:</p>
-                    <ul class="service-list">
-                        <li><span>•</span> Quick turnaround on product requests</li>
-                        <li><span>•</span> Direct access to a dedicated account manager</li>
-                        <li><span>•</span> Transparent pricing with no hidden fees</li>
-                        <li><span>•</span> Flexible minimum order requirements</li>
-                        <li><span>•</span> Authentic products with full traceability</li>
-                    </ul>
+                    <div class="service-card-content">
+                        <p>Supporting independent and chain pharmacies with consistent access to quality pharmaceuticals. We understand the daily challenges of inventory management and work to ensure your shelves stay stocked with the products your patients need.</p>
+                        <p class="service-list-title">What We Deliver:</p>
+                        <ul class="service-list">
+                            <li><span>•</span> Quick turnaround on product requests</li>
+                            <li><span>•</span> Direct access to a dedicated account manager</li>
+                            <li><span>•</span> Transparent pricing with no hidden fees</li>
+                            <li><span>•</span> Flexible minimum order requirements</li>
+                            <li><span>•</span> Authentic products with full traceability</li>
+                        </ul>
+                    </div>
                     <a href="#contact" class="service-link">GET STARTED →</a>
                 </div>
                 <div class="service-card">
                     <h3>Hospitals & Medical Institutions</h3>
-                    <p>Large-scale healthcare facilities require dependable pharmaceutical partners. We specialize in fulfilling complex orders for hospitals, medical centers, and healthcare networks operating at any scale.</p>
-                    <p class="service-list-title">What Sets Us Apart:</p>
-                    <ul class="service-list">
-                        <li><span>•</span> Capacity for high-volume orders</li>
-                        <li><span>•</span> Access to specialty and hard-to-find medications</li>
-                        <li><span>•</span> Coordinated delivery scheduling</li>
-                        <li><span>•</span> Comprehensive regulatory documentation</li>
-                        <li><span>•</span> Direct communication with your procurement team</li>
-                    </ul>
+                    <div class="service-card-content">
+                        <p>Large-scale healthcare facilities require dependable pharmaceutical partners. We specialize in fulfilling complex orders for hospitals, medical centers, and healthcare networks operating at any scale.</p>
+                        <p class="service-list-title">What Sets Us Apart:</p>
+                        <ul class="service-list">
+                            <li><span>•</span> Capacity for high-volume orders</li>
+                            <li><span>•</span> Access to specialty and hard-to-find medications</li>
+                            <li><span>•</span> Coordinated delivery scheduling</li>
+                            <li><span>•</span> Comprehensive regulatory documentation</li>
+                            <li><span>•</span> Direct communication with your procurement team</li>
+                        </ul>
+                    </div>
                     <a href="#contact" class="service-link">LEARN MORE →</a>
                 </div>
                 <div class="service-card">
                     <h3>Cold-Chain Distribution</h3>
-                    <p>Temperature-sensitive medications demand specialized handling. Our cold-chain logistics ensure biologics, vaccines, insulin, and other critical products maintain proper temperature from warehouse to your facility.</p>
-                    <p class="service-list-title">Our Cold-Chain Expertise:</p>
-                    <ul class="service-list">
-                        <li><span>•</span> Advanced thermal packaging technology</li>
-                        <li><span>•</span> Continuous temperature monitoring and logging</li>
-                        <li><span>•</span> Validated shipping protocols for 72+ hour transit</li>
-                        <li><span>•</span> International shipping compliance</li>
-                        <li><span>•</span> Full cold-chain documentation for regulatory needs</li>
-                    </ul>
+                    <div class="service-card-content">
+                        <p>Temperature-sensitive medications demand specialized handling. Our cold-chain logistics ensure biologics, vaccines, insulin, and other critical products maintain proper temperature from warehouse to your facility.</p>
+                        <p class="service-list-title">Our Cold-Chain Expertise:</p>
+                        <ul class="service-list">
+                            <li><span>•</span> Advanced thermal packaging technology</li>
+                            <li><span>•</span> Continuous temperature monitoring and logging</li>
+                            <li><span>•</span> Validated shipping protocols for 72+ hour transit</li>
+                            <li><span>•</span> International shipping compliance</li>
+                            <li><span>•</span> Full cold-chain documentation for regulatory needs</li>
+                        </ul>
+                    </div>
                     <a href="#contact" class="service-link">INQUIRE NOW →</a>
                 </div>
             </div>
@@ -1146,7 +1167,7 @@
                     </div>
                     <div class="form-group">
                         <label for="org-type">Type of Organization *</label>
-                        <select id="org-type" name="org-type" required style="width: 100%; padding: 12px; border: 2px solid #FDB913; border-radius: 10px; font-family: inherit; font-size: 14px; background-color: rgba(255, 255, 255, 0.95); color: #333;">
+                        <select id="org-type" name="org-type" required>
                             <option value="">Select organization type</option>
                             <option value="hospital">Hospital</option>
                             <option value="clinic">Clinic</option>
@@ -1172,15 +1193,16 @@
                 </form>
             </div>
         </div>
-    </section>
 
-    <!-- Footer -->
-    <footer>
+        <!-- Footer Separator -->
+        <hr class="footer-separator">
+
+        <!-- Footer Content -->
         <div class="footer-content">
             <p>&copy; 2025 CAN Healthcare Supplier. All Rights Reserved.</p>
             <p style="margin-top: 10px; font-size: 14px;">Licensed Pharmaceutical Wholesaler | Supplying Worldwide | Committed to Quality Healthcare Solutions</p>
         </div>
-    </footer>
+    </section>
 
     <script>
         // Burger menu toggle
