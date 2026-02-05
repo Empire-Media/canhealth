@@ -22,7 +22,7 @@
         /* Header and Navigation */
         header {
             background: #F7FFFF;
-            padding: 0 0 15px 0;
+            padding: 0 0 30px 0;
             position: sticky;
             top: 0;
             z-index: 100;
@@ -31,7 +31,7 @@
 
         .header-top {
             background: linear-gradient(90.01deg, #035373 0.01%, #8DDDDF 181.07%);
-            padding: 20px 10px;
+            padding: 20px 0;
             font-size: 14px;
             color: #ffffff;
         }
@@ -39,7 +39,7 @@
         .header-top-content {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 0 0 0 0;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -65,8 +65,8 @@
 
         .nav-container {
             max-width: 1200px;
-            margin: 10px auto 0 auto;
-            padding: 0 20px;
+            margin: 30px auto 0 auto;
+            padding: 0;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -85,7 +85,7 @@
             height: 60px;
             max-width: 300px;
             object-fit: contain;
-            margin: 10px 10px 0 10px;
+            margin: 10px 10px 0 0;
         }
 
         nav ul {
@@ -101,7 +101,7 @@
             width: 600px;
             height: 50px;
             background-color: #DDFDFE;
-            border-radius: 25px;
+            border-radius: 15px;
         }
 
         nav a {
@@ -135,6 +135,12 @@
             transform: scale(1.05);
         }
 
+        .working-section, .services-section, .why-section, .about-section, .licensed-section, .hero{
+            width: 1200px;
+            margin-left: auto!important;
+            margin-right: auto!important;
+        }
+
         /* Hero Section */
         .hero {
             background-image: url("edited 2 medical-background-with-flat-icons-symbols 1.png");
@@ -148,7 +154,8 @@
             flex-direction: column;
             justify-content: center;
             border-radius: 20px;
-            margin: 20px;
+            margin-bottom: 20px;
+            margin-top: 70px;
         }
 
         .hero-content {
@@ -243,7 +250,7 @@
 
         /* About Section */
         .about-section {
-            padding: 50px 20px 0 20px; /* 50px top because licensed-section has 20px margin-bottom */
+            padding: 50px 0px 0 0px; /* 50px top because licensed-section has 20px margin-bottom */
         }
 
         .about-container {
@@ -332,8 +339,7 @@
 
         /* Why Choose Us Section */
         .why-section {
-            padding: 70px 20px 0 20px;
-            background-color: #fff;
+            padding: 70px 0px 0 0px;
         }
         .why-container {
             max-width: 1200px;
@@ -400,7 +406,8 @@
 
         /* Services Section */
         .services-section {
-            padding: 20px 20px 0 20px;
+            padding: 0;
+            margin-top: 70px;
         }
 
         .services-container {
@@ -520,8 +527,10 @@
 
         /* Way of Working Section */
         .working-section {
-            padding: 10px 20px 50px 20px; /* 50px bottom because contact-section has 20px margin-top */
+            padding: 20px 0; /* 50px bottom because contact-section has 20px margin-top */
             background-color: #FFFCEF;
+            border-radius: 25px;
+            margin: 70px 0;
         }
 
         .working-container {
