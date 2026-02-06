@@ -471,21 +471,18 @@
               grid-template-columns: repeat(3, 1fr);
               gap: 40px;
               margin-top: 40px;
+              align-items: start;
           }
 
           .service-card {
               background-color: #F7FFFF;
-              padding: 20px;
+              padding: 30px;
               border-radius: 20px;
               border: 3px solid #E5B60B;
               transition: all 0.3s;
               display: flex;
               flex-direction: column;
-          }
-
-          .service-card:hover {
-              transform: translateY(-5px);
-              box-shadow: 0 10px 30px rgba(253, 185, 19, 0.3);
+              min-height: 465px;
           }
 
           .service-card h3 {
@@ -493,6 +490,11 @@
               height: 70px;
               margin-bottom: 7px;
               color: #D1AB00;
+          }
+
+          .service-card:hover {
+              transform: translateY(-5px);
+              box-shadow: 0 10px 30px rgba(253, 185, 19, 0.3);
           }
 
           .service-card p {
@@ -506,16 +508,44 @@
               flex: 1;
           }
 
+          .service-card-summary {
+              margin-bottom: 20px;
+          }
+
+          .service-card-details {
+              max-height: 0;
+              overflow: hidden;
+              transition: max-height 0.4s ease, opacity 0.4s ease;
+              opacity: 0;
+          }
+
+          .service-card-details.expanded {
+              max-height: 500px;
+              opacity: 1;
+              margin-top: 15px;
+          }
+
           .service-link {
               color: #D1AB00;
               text-decoration: none;
               font-weight: bold;
               transition: color 0.3s;
               text-align: center;
+              cursor: pointer;
+              display: inline-block;
+              margin-top: 15px;
           }
 
           .service-link:hover{
               text-decoration: underline;
+          }
+
+          .service-link.expanded::after {
+              content: ' ↑';
+          }
+
+          .service-link:not(.expanded)::after {
+              content: '';
           }
 
           .service-list {
@@ -781,7 +811,8 @@
               border-radius: 25px;
               cursor: pointer;
               font-size: 18px;
-              width: 100%;
+              display: block;
+              margin: 0 auto;
           }
 
           .form-submit:hover {
@@ -1319,79 +1350,91 @@
           <div class="service-card">
             <h3>Pharmacies & Retail Healthcare</h3>
             <div class="service-card-content">
-              <p>
-                Supporting independent and chain pharmacies with consistent
-                access to quality pharmaceuticals. We understand the daily
-                challenges of inventory management and work to ensure your
-                shelves stay stocked with the products your patients need.
-              </p>
-              <p class="service-list-title">What We Deliver:</p>
-              <ul class="service-list">
-                <li><span>•</span> Quick turnaround on product requests</li>
-                <li>
-                  <span>•</span> Direct access to a dedicated account manager
-                </li>
-                <li><span>•</span> Transparent pricing with no hidden fees</li>
-                <li><span>•</span> Flexible minimum order requirements</li>
-                <li>
-                  <span>•</span> Authentic products with full traceability
-                </li>
-              </ul>
+              <div class="service-card-summary">
+                <p>
+                  Supporting independent and chain pharmacies with consistent
+                  access to quality pharmaceuticals. We understand the daily
+                  challenges of inventory management and work to ensure your
+                  shelves stay stocked with the products your patients need.
+                </p>
+              </div>
+              <div class="service-card-details">
+                <p class="service-list-title">What We Deliver:</p>
+                <ul class="service-list">
+                  <li><span>•</span> Quick turnaround on product requests</li>
+                  <li>
+                    <span>•</span> Direct access to a dedicated account manager
+                  </li>
+                  <li><span>•</span> Transparent pricing with no hidden fees</li>
+                  <li><span>•</span> Flexible minimum order requirements</li>
+                  <li>
+                    <span>•</span> Authentic products with full traceability
+                  </li>
+                </ul>
+              </div>
             </div>
-            <a href="#contact" class="service-link">GET STARTED →</a>
+            <a class="service-link" onclick="toggleServiceCard(this)">More Info →</a>
           </div>
           <div class="service-card">
             <h3>Hospitals & Medical Institutions</h3>
             <div class="service-card-content">
-              <p>
-                Large-scale healthcare facilities require dependable
-                pharmaceutical partners. We specialize in fulfilling complex
-                orders for hospitals, medical centers, and healthcare networks
-                operating at any scale.
-              </p>
-              <p class="service-list-title">What Sets Us Apart:</p>
-              <ul class="service-list">
-                <li><span>•</span> Capacity for high-volume orders</li>
-                <li>
-                  <span>•</span> Access to specialty and hard-to-find
-                  medications
-                </li>
-                <li><span>•</span> Coordinated delivery scheduling</li>
-                <li><span>•</span> Comprehensive regulatory documentation</li>
-                <li>
-                  <span>•</span> Direct communication with your procurement team
-                </li>
-              </ul>
+              <div class="service-card-summary">
+                <p>
+                  Large-scale healthcare facilities require dependable
+                  pharmaceutical partners. We specialize in fulfilling complex
+                  orders for hospitals, medical centers, and healthcare networks
+                  operating at any scale.
+                </p>
+              </div>
+              <div class="service-card-details">
+                <p class="service-list-title">What Sets Us Apart:</p>
+                <ul class="service-list">
+                  <li><span>•</span> Capacity for high-volume orders</li>
+                  <li>
+                    <span>•</span> Access to specialty and hard-to-find
+                    medications
+                  </li>
+                  <li><span>•</span> Coordinated delivery scheduling</li>
+                  <li><span>•</span> Comprehensive regulatory documentation</li>
+                  <li>
+                    <span>•</span> Direct communication with your procurement team
+                  </li>
+                </ul>
+              </div>
             </div>
-            <a href="#contact" class="service-link">LEARN MORE →</a>
+            <a class="service-link" onclick="toggleServiceCard(this)">More Info →</a>
           </div>
           <div class="service-card">
             <h3>Cold-Chain Distribution</h3>
             <div class="service-card-content">
-              <p>
-                Temperature-sensitive medications demand specialized handling.
-                Our cold-chain logistics ensure biologics, vaccines, insulin,
-                and other critical products maintain proper temperature from
-                warehouse to your facility.
-              </p>
-              <p class="service-list-title">Our Cold-Chain Expertise:</p>
-              <ul class="service-list">
-                <li><span>•</span> Advanced thermal packaging technology</li>
-                <li>
-                  <span>•</span> Continuous temperature monitoring and logging
-                </li>
-                <li>
-                  <span>•</span> Validated shipping protocols for 72+ hour
-                  transit
-                </li>
-                <li><span>•</span> International shipping compliance</li>
-                <li>
-                  <span>•</span> Full cold-chain documentation for regulatory
-                  needs
-                </li>
-              </ul>
+              <div class="service-card-summary">
+                <p>
+                  Temperature-sensitive medications demand specialized handling.
+                  Our cold-chain logistics ensure biologics, vaccines, insulin,
+                  and other critical products maintain proper temperature from
+                  warehouse to your facility.
+                </p>
+              </div>
+              <div class="service-card-details">
+                <p class="service-list-title">Our Cold-Chain Expertise:</p>
+                <ul class="service-list">
+                  <li><span>•</span> Advanced thermal packaging technology</li>
+                  <li>
+                    <span>•</span> Continuous temperature monitoring and logging
+                  </li>
+                  <li>
+                    <span>•</span> Validated shipping protocols for 72+ hour
+                    transit
+                  </li>
+                  <li><span>•</span> International shipping compliance</li>
+                  <li>
+                    <span>•</span> Full cold-chain documentation for regulatory
+                    needs
+                  </li>
+                </ul>
+              </div>
             </div>
-            <a href="#contact" class="service-link">INQUIRE NOW →</a>
+            <a class="service-link" onclick="toggleServiceCard(this)">More Info →</a>
           </div>
         </div>
       </div>
@@ -1652,6 +1695,22 @@
 
       // Close popup when clicking overlay
       document.getElementById('popupOverlay').addEventListener('click', closeSuccessPopup);
+
+      // Toggle service card expansion
+      function toggleServiceCard(link) {
+        const card = link.closest('.service-card');
+        const details = card.querySelector('.service-card-details');
+
+        if (details.classList.contains('expanded')) {
+          details.classList.remove('expanded');
+          link.textContent = 'More Info →';
+          link.classList.remove('expanded');
+        } else {
+          details.classList.add('expanded');
+          link.textContent = 'Less Info →';
+          link.classList.add('expanded');
+        }
+      }
 
       // Get In Touch button functionality
       document.querySelectorAll(".cta-button").forEach((button) => {
