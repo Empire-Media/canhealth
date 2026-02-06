@@ -463,7 +463,7 @@
               margin-right: auto;
               color: #035373;
               font-weight: 600;
-              text-align: left;
+              text-align: center;
           }
 
           .services-cards {
@@ -502,6 +502,11 @@
               line-height: 1.8;
               font-weight: 600;
               color: #035373;
+              text-align: center;
+          }
+
+          .service-card h3 {
+              text-align: center;
           }
 
           .service-card-content {
@@ -532,7 +537,7 @@
               transition: color 0.3s;
               text-align: center;
               cursor: pointer;
-              display: inline-block;
+              display: block;
               margin-top: 15px;
           }
 
@@ -552,24 +557,19 @@
               list-style: none;
               padding-left: 0;
               margin-bottom: 15px;
+              text-align: center;
           }
 
           p.service-list-title {
               margin-top: 0;
               font-weight: 700;
               color: #035373;
+              text-align: center;
           }
 
           .service-list li {
               padding: 0;
-              padding-left: 20px;
               font-weight: 600;
-              position: relative;
-          }
-
-          .service-list li span {
-              position: absolute;
-              left: 0;
           }
 
           /* Way of Working Section */
@@ -758,6 +758,16 @@
               font-size: 18px;
               line-height: 1.8;
               margin-bottom: 15px;
+          }
+
+          .contact-info-box a {
+              color: inherit;
+              text-decoration: none;
+              transition: color 0.3s;
+          }
+
+          .contact-info-box a:hover {
+              color: #FDB913;
           }
 
           .contact-form {
@@ -1148,7 +1158,7 @@
           professionals worldwide with premium products through reliable
           sourcing and exceptional service.
         </p>
-        <button class="cta-button">OUR SERVICES</button>
+        <button class="cta-button" data-target="services">OUR SERVICES</button>
       </div>
     </section>
 
@@ -1361,15 +1371,11 @@
               <div class="service-card-details">
                 <p class="service-list-title">What We Deliver:</p>
                 <ul class="service-list">
-                  <li><span>•</span> Quick turnaround on product requests</li>
-                  <li>
-                    <span>•</span> Direct access to a dedicated account manager
-                  </li>
-                  <li><span>•</span> Transparent pricing with no hidden fees</li>
-                  <li><span>•</span> Flexible minimum order requirements</li>
-                  <li>
-                    <span>•</span> Authentic products with full traceability
-                  </li>
+                  <li>Quick turnaround on product requests</li>
+                  <li>Direct access to a dedicated account manager</li>
+                  <li>Transparent pricing with no hidden fees</li>
+                  <li>Flexible minimum order requirements</li>
+                  <li>Authentic products with full traceability</li>
                 </ul>
               </div>
             </div>
@@ -1389,16 +1395,11 @@
               <div class="service-card-details">
                 <p class="service-list-title">What Sets Us Apart:</p>
                 <ul class="service-list">
-                  <li><span>•</span> Capacity for high-volume orders</li>
-                  <li>
-                    <span>•</span> Access to specialty and hard-to-find
-                    medications
-                  </li>
-                  <li><span>•</span> Coordinated delivery scheduling</li>
-                  <li><span>•</span> Comprehensive regulatory documentation</li>
-                  <li>
-                    <span>•</span> Direct communication with your procurement team
-                  </li>
+                  <li>Capacity for high-volume orders</li>
+                  <li>Access to specialty and hard-to-find medications</li>
+                  <li>Coordinated delivery scheduling</li>
+                  <li>Comprehensive regulatory documentation</li>
+                  <li>Direct communication with your procurement team</li>
                 </ul>
               </div>
             </div>
@@ -1418,19 +1419,11 @@
               <div class="service-card-details">
                 <p class="service-list-title">Our Cold-Chain Expertise:</p>
                 <ul class="service-list">
-                  <li><span>•</span> Advanced thermal packaging technology</li>
-                  <li>
-                    <span>•</span> Continuous temperature monitoring and logging
-                  </li>
-                  <li>
-                    <span>•</span> Validated shipping protocols for 72+ hour
-                    transit
-                  </li>
-                  <li><span>•</span> International shipping compliance</li>
-                  <li>
-                    <span>•</span> Full cold-chain documentation for regulatory
-                    needs
-                  </li>
+                  <li>Advanced thermal packaging technology</li>
+                  <li>Continuous temperature monitoring and logging</li>
+                  <li>Validated shipping protocols for 72+ hour transit</li>
+                  <li>International shipping compliance</li>
+                  <li>Full cold-chain documentation for regulatory needs</li>
                 </ul>
               </div>
             </div>
@@ -1494,11 +1487,11 @@
             <p>
               For general enquiries including product availability, pricing, and
               supply solutions, please contact us via email at
-              info@canhealthcaresupplier.com or by completing the form below.
+              <a href="mailto:info@canhealthcaresupplier.com">info@canhealthcaresupplier.com</a> or by completing the form below.
               Our team responds to all inquiries within 24 business hours.
             </p>
-            <p><strong>Email:</strong> info@canhealthcaresupplier.com</p>
-            <p><strong>Phone:</strong> +971 55 203 1983</p>
+            <p><strong>Email:</strong> <a href="mailto:info@canhealthcaresupplier.com">info@canhealthcaresupplier.com</a></p>
+            <p><strong>Phone:</strong> <a href="tel:+971552031983">+971 55 203 1983</a></p>
             <p><strong>Address: </strong>SAIF Executive Office P8-11-69 Sharjah Dubai, United Arab Emirates</p>            
           </div>
           <!-- Web3Forms Integration - FREE Unlimited Submissions -->
@@ -1712,12 +1705,13 @@
         }
       }
 
-      // Get In Touch button functionality
+      // CTA button functionality
       document.querySelectorAll(".cta-button").forEach((button) => {
         button.addEventListener("click", function () {
-          const contactSection = document.querySelector("#contact");
-          if (contactSection) {
-            contactSection.scrollIntoView({ behavior: "smooth" });
+          const target = this.getAttribute("data-target") || "contact";
+          const targetSection = document.querySelector("#" + target);
+          if (targetSection) {
+            targetSection.scrollIntoView({ behavior: "smooth" });
           }
         });
       });
